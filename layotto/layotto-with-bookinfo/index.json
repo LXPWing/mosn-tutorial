@@ -1,5 +1,5 @@
 {
-  "title": "Mosn with Istio",
+  "title": "Layotto with preview server Demo",
   "description": "Run the Istio Bookinfo sample with mosn as the data plane",
   "details": {
       "steps": [
