@@ -6,7 +6,7 @@ git clone https://github.com/layotto/istio.git
 
 curl -L https://istio.io/downloadIstio | TARGET_ARCH=x86_64 sh -
 
-cp /root/istio/samples/bookinfo /root/istio-${ISTIO_VERSION}/samples
+cp -r /root/istio/samples/bookinfo /root/istio-${ISTIO_VERSION}/samples
 
 echo "export PATH=/root/istio-${ISTIO_VERSION}/bin:\$PATH" >> .bashrc
 export PATH=/root/istio-${ISTIO_VERSION}/bin:$PATH
