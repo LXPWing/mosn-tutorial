@@ -26,7 +26,7 @@ Next we install the [bookinfo sample](https://github.com/istio/istio/tree/master
 kubectl apply -f /root/istio-${ISTIO_VERSION}/samples/bookinfo/networking/virtual-service-all-v1.yaml
 kubectl apply -f /root/istio-${ISTIO_VERSION}/samples/bookinfo/networking/bookinfo-gateway.yaml
 kubectl apply -f /root/istio-${ISTIO_VERSION}/samples/bookinfo/networking/destination-rule-all.yaml
-kubectl apply -f /root/istio-${ISTIO_VERSION}/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl apply -f /root/istio/samples/bookinfo/platform/kube/bookinfo.yaml
 kubectl wait deploy --all --for condition=available --timeout=1h
 ```{{exec}}
 
