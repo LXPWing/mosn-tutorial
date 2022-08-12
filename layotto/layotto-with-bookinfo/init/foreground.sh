@@ -4,6 +4,8 @@ docker pull layotto/preview_server:latest
 docker run -d -p 9080:8080 --name layotto-preview-server layotto/preview_server:latest
 git clone https://github.com/layotto/istio.git
 
+git clone https://github.com/LXPWing/preview-server-k8s-yml.git
+
 curl -L https://istio.io/downloadIstio | TARGET_ARCH=x86_64 sh -
 
 #rm -rf /root/istio/bin
