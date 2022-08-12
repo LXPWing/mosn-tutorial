@@ -18,6 +18,11 @@ Now we enable the Istio sidecar injection for the `default` *Namespace*:
 kubectl label namespace default istio-injection=enabled --overwrite
 ```{{exec}}
 
+### Create Layotto namespace
+
+```plain
+kubectl create namespace layotto
+```{{exec}}
 
 ### Install app
 Next we install the [bookinfo sample](https://github.com/istio/istio/tree/master/samples/bookinfo):
