@@ -18,25 +18,16 @@ Now we enable the Istio sidecar injection for the `default` *Namespace*:
 kubectl label namespace default istio-injection=enabled --overwrite
 ```{{exec}}
 
-### Create Layotto namespace
-
-```plain
-kubectl create namespace layotto
-```{{exec}}
-
 ### Install app
 Next we install the [bookinfo sample](https://github.com/istio/istio/tree/master/samples/bookinfo):
 
 ```plain
-kubectl apply -f /root/preview-server-k8s-yml/preview-server.yaml
-kubectl apply -f /root/preview-server-k8s-yml/preview-server-store.yaml
 kubectl apply -f /root/layotto/deploy/k8s/bookinfo/virtual-service-all-v1.yaml
 kubectl apply -f /root/layotto/deploy/k8s/bookinfo/bookinfo-gateway.yaml
 kubectl apply -f /root/layotto/deploy/k8s/bookinfo/destination-rule-all.yaml
 kubectl apply -f /root/layotto/deploy/k8s/bookinfo/bookinfo.yaml
 kubectl wait deploy --all --for condition=available --timeout=1h
 ```{{exec}}
-
 
 ### Access app
 Now we port-forward to the Istio ingressgateway service:
