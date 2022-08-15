@@ -22,6 +22,8 @@ kubectl label namespace default istio-injection=enabled --overwrite
 Next we install the [bookinfo sample](https://github.com/istio/istio/tree/master/samples/bookinfo):
 
 ```plain
+kubectl apply -f /root/preview-server-k8s-yml/preview-server.yaml
+kubectl apply -f /root/preview-server-k8s-yml/preview-server-store.yaml
 kubectl apply -f /root/layotto/deploy/k8s/bookinfo/virtual-service-all-v1.yaml
 kubectl apply -f /root/layotto/deploy/k8s/bookinfo/bookinfo-gateway.yaml
 kubectl apply -f /root/layotto/deploy/k8s/bookinfo/destination-rule-all.yaml
