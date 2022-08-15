@@ -9,6 +9,12 @@ Check the installed version:
 istioctl version
 ```{{exec}}
 
+### Create Layotto namespace
+
+```plain
+kubectl create namespace layotto
+```{{exec}}
+
 <br>
 
 ### Sidecar injection
